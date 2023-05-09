@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* Start Global Rules */
+body {
+  font-family: Barlow Condensed, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  background-image: url(../img/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+header .img {
+  padding: 0 20px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  gap: 40px;
+  height: 70px;
+  backdrop-filter: blur(40.7742px);
+  background-color: hsla(0, 0%, 100%, 0.04);
+  position: relative;
+}
+header ul::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background-color: white;
+  left: -150px;
+  opacity: 0.2;
+}
+header ul a {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  position: relative !important;
+  transition: 0.5s;
+}
+header ul a:hover {
+  opacity: 0.4;
+}
+header ul a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -26px;
+  transition: 0.5s;
+}
+header ul a:hover::before {
+  width: 100%;
+}
+header ul a span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 5px;
+}
+#menu {
+  color: white;
+  font-size: 30px;
+  position: relative !important;
+  display: none;
+  cursor: pointer;
+}
+#close {
+  display: none;
+}
+/* End Header */
+
+/* Start Section */
+section .title {
+  padding-top: 150px;
+  padding-left: 200px;
+}
+section .title span:first-child {
+  color: #4b5059;
+  margin-right: 30px;
+  font-size: 30px;
+}
+section .title span:last-child {
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.section-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 80px;
+  padding: 100px 30px 5px;
+}
+#tech-img {
+  width: 400px;
+}
+.num div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 23px;
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.5s;
+}
+.num div:first-child {
+  background-color: white;
+  color: black;
+  border: none;
+}
+.num div:hover {
+  border: 1px solid white;
+}
+.info-2 {
+  color: white;
+}
+.intro {
+  font-size: 12px;
+  color: #4b5059;
+  letter-spacing: 2px;
+}
+#tech-info {
+  width: 400px;
+  line-height: 1.5;
+  color: hwb(0deg 100% 0% / 40%);
+}
+#tech-name {
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+/* End Section */
+
+/* media */
+
+@media (max-width: 768px) {
+  .container {
+    background-image: url(../img/technology/background-technology-mobile.jpg);
+  }
+  header ul::before,
+  header ul a::before {
+    display: none;
+  }
+  #menu {
+    display: block;
+    padding: 0 20px;
+  }
+  header ul {
+    position: absolute;
+    flex-direction: column;
+    backdrop-filter: none;
+    right: 0px;
+    background-color: white;
+    height: 485px;
+    padding-bottom: 30px;
+    top: 0;
+    padding-right: 20px;
+    padding-top: 120px;
+    width: 120px;
+    display: none;
+    overflow: hidden;
+  }
+  #close {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    font-size: 20px;
+  }
+  header ul a {
+    color: black;
+  }
+  .one {
+    display: none;
+  }
+  section .title {
+    padding-left: 30px;
+    line-height: 1.5;
+  }
+  section .title span:first-child {
+    margin-right: 10px;
+  }
+  section .title span:last-child {
+    font-size: 16px;
+  }
+  #tech-name {
+    font-size: 20px;
+  }
+  #tech-info {
+    width: auto;
+  }
+  .section-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .num {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .tech-img {
+    text-align: center;
+  }
+  #tech-img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  #tech-img {
+    width: 250px;
+  }
+}

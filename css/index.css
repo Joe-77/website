@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* Start Global Rules */
+body {
+  font-family: Barlow Condensed, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  background-image: url(../img/home/background-home-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+/* End Global Rules */
+
+/* Start Header */
+header {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+header .img {
+  padding: 0 20px;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  gap: 40px;
+  height: 70px;
+  backdrop-filter: blur(40.7742px);
+  background-color: hsla(0, 0%, 100%, 0.04);
+  position: relative;
+}
+header ul::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background-color: white;
+  left: -150px;
+  opacity: 0.2;
+}
+header ul a {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  position: relative !important;
+  transition: 0.5s;
+}
+header ul a:hover {
+  opacity: 0.4;
+}
+header ul a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -26px;
+  transition: 0.5s;
+}
+header ul a:hover::before {
+  width: 100%;
+}
+header ul a span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 5px;
+}
+/* End Header */
+
+/* Start Section */
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 50px 0;
+}
+section .left .intro {
+  color: #ffffff40;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  width: fit-content;
+}
+section .left .intro span {
+  color: white !important;
+  font-size: 90px;
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
+  opacity: 1;
+}
+section .left .des {
+  width: 440px;
+  color: #ffffff4a;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+section .right {
+  background-color: white;
+  color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+section .right:hover {
+  box-shadow: 0 0 0 88px hsla(0, 0%, 100%, 0.1);
+}
+#menu {
+  color: white;
+  font-size: 30px;
+  position: relative !important;
+  display: none;
+  cursor: pointer;
+}
+#close {
+  display: none;
+}
+/* End Section */
+
+/* media */
+
+@media (max-width: 768px) {
+  .container {
+    background-image: url(../img/home/background-home-mobile.jpg);
+  }
+  header ul::before,
+  header ul a::before {
+    display: none;
+  }
+  #menu {
+    display: block;
+    padding: 0 20px;
+  }
+  header ul {
+    position: absolute;
+    flex-direction: column;
+    backdrop-filter: none;
+    right: 0px;
+    background-color: white;
+    height: 100vh;
+    padding-bottom: 30px;
+    top: 0;
+    padding-right: 20px;
+    padding-top: 120px;
+    width: 120px;
+    display: none;
+    overflow: hidden;
+  }
+  #close {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    font-size: 20px;
+  }
+  header ul a {
+    color: black;
+  }
+  .one {
+    display: none;
+  }
+  section {
+    flex-direction: column;
+  }
+  section .left .des {
+    width: 100%;
+  }
+  section .left .intro {
+    line-height: 1.5;
+  }
+  section .left .intro span {
+    font-size: 50px;
+  }
+  section .right {
+    margin-right: 0;
+  }
+  .right-1 {
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+}
